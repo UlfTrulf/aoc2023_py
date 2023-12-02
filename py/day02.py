@@ -19,10 +19,10 @@ def convert_subset(sub):
 
 
 def reader(line):
-    l = line.split(':')
-    n = int(l[0].split(' ')[1])
-    ss = l[1].split(';')
-    return l, n, ss
+    li = line.split(':')
+    n = int(li[0].split(' ')[1])
+    ss = li[1].split(';')
+    return li, n, ss
 
 
 def part1():
