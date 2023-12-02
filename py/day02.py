@@ -25,8 +25,8 @@ def reader(line):
     return li, n, ss
 
 
-def part1():
-    f = open('input/day02.txt')
+def part1(txt):
+    f = open(txt)
     s = 0
     for line in f:
         l, n, ss = reader(line)
@@ -37,11 +37,11 @@ def part1():
                 limit = False
         if limit:
             s += n
-    print('Day2 Part1: ' + str(s))
+    return s
 
 
-def part2():
-    f = open('input/day02.txt')
+def part2(txt):
+    f = open(txt)
     s = 0
     for line in f:
         l, n, ss = reader(line)
@@ -54,4 +54,4 @@ def part2():
                     m[i] = c[i]
                 i += 1
         s += np.prod(m)
-    print('Day2 Part2: ' + str(s))
+    return s
