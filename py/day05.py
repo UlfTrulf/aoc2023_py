@@ -38,9 +38,9 @@ def part1(txt):
 def find_range_overlap(a, b):
     ma = max(a[0], b[0])
     mi = min((a[0] + a[1]), (b[0] + b[1]))
-    ov = list(range(ma, mi))
-    if len(ov):
-        return ov[0], len(ov)
+    ov = (ma, mi - ma)
+    if ov[1] > 0:
+        return ov
     else:
         return 0, 0
 
