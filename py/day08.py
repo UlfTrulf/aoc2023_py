@@ -40,13 +40,11 @@ def part2(txt):
         c = current
         i = 0
         looped = False
-        visited = set()
         while not looped:
             side = int(order[i % len(order)])
             for x in instructions:
                 if x[0] == c:
-                    visited.add((c, side))
-                    if (c, side) in visited and c[2] == 'Z':
+                    if c[2] == 'Z':
                         loops.append(i)
                         looped = True
                     c = x[side]
