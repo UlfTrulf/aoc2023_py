@@ -15,7 +15,6 @@ def reader(txt):
 
 
 def part1(txt):
-    return 0
     current = 'AAA'
     order, instructions = reader(txt)
     i = 0
