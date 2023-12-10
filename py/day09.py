@@ -1,6 +1,3 @@
-import regex as re
-
-
 def reader(txt):
     sets = []
     for line in open(txt):
