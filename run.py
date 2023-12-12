@@ -7,9 +7,10 @@ start_time = time.time()
 fs_time = '{}:{}:{}'.format(time.localtime().tm_hour, time.localtime().tm_min, time.localtime().tm_sec)
 print('starting at: {}'.format(fs_time))
 modules = glob.glob(join('py', "*.py"))
-
 for f in modules:
     module_name = basename(f)[:-3]
+    if module_name == '__init__':
+        break
     day_start_time = time.time()
     print('starting {}:'.format(module_name))
     m = import_module('py.' + module_name)
